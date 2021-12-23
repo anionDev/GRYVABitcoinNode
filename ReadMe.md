@@ -10,7 +10,7 @@ Represents a [Bitcoin-node](https://bitcoin.org/)-server.
 
 Using volumes is recommended to preserve data. The available folder for a volume is:
 
-- `/Data`: Folder for all stored data and configuration of the hosted server.
+- `/Content/Data`: Folder for all stored data and configuration of the hosted server.
 
 ### Environment-variables
 
@@ -31,10 +31,16 @@ This repository applies the [GitFlowSimplified](https://projects.aniondev.de/Com
 The image can be built using the following command:
 
 ``` sh
+docker image build --force-rm --progress plain --build-arg EnvironmentStage=Development --tag gryvabitcoinnode:latest .
+```
+
+The image can also be built using the following command which uses no cache:
+
+``` sh
 docker image build --no-cache --pull --force-rm --progress plain --build-arg EnvironmentStage=Development --tag gryvabitcoinnode:latest .
 ```
 
-The environment-stage can have the one of the following values:
+The `EnvironmentStage`-build-argument must contain one of the following values:
 
 - `Development`
 - `QualityManagement`
@@ -47,3 +53,11 @@ The built image can be tested using the following command:
 ``` sh
 docker-compose -f docker-compose.example.yml -p GRYVABitcoinNode up --remove-orphans --force-recreate
 ```
+
+## Version
+
+The latest image contains v0.21.1 of the Bitcoin-node.
+
+## License
+
+See `License.txt` for license-information.

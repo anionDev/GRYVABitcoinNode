@@ -1,33 +1,34 @@
 FROM debian:stable-slim
 
 ARG EnvironmentStage
-
-RUN mkdir /Workspace
-WORKDIR /Workspace
+ARG ApplicationVersion=0.21.1
 
 RUN apt update
-RUN apt install -y git openjdk-17-jre wget
+RUN apt install -y git wget
 
-RUN git clone --single-branch --branch main git://github.com/anionDev/ScriptCollection.git
-RUN chmod -R +x ./ScriptCollection/Other
+RUN mkdir /Content
 
-RUN /Workspace/ScriptCollection/Other/ServerMaintenance/Debian/Common/CreateUser.sh "user" "/userhome" "false" "" "false" "false"
+RUN git clone --depth 1 --single-branch --branch main git://github.com/anionDev/ScriptCollection.git /Content/ScriptCollection
+RUN chmod -R +x /Content/ScriptCollection/Other
 
-RUN mkdir /Data
+RUN mkdir /Content/Data
 
-RUN mkdir /App
-WORKDIR /App
+RUN /Content/ScriptCollection/Other/ServerMaintenance/Debian/Common/CreateUser.sh "user" "/Content/Data" "false" "" "false" "false"
 
-# TODO install application
+RUN mkdir /Content/App
+WORKDIR /Content/App
 
-COPY ./EntryPointScript.sh /App/EntryPointScript.sh
-RUN chmod +x /App/EntryPointScript.sh
-RUN chown -R user /App
-RUN chown -R user /Data
+RUN wget https://bitcoincore.org/bin/bitcoin-core-${ApplicationVersion}/bitcoin-${ApplicationVersion}-x86_64-linux-gnu.tar.gz
+RUN tar xzf bitcoin-${ApplicationVersion}-x86_64-linux-gnu.tar.gz
+RUN rm bitcoin-${ApplicationVersion}-x86_64-linux-gnu.tar.gz
+RUN install -m 0755 -t /usr/local/bin bitcoin-${ApplicationVersion}/bin/*
 
-RUN /Workspace/ScriptCollection/Other/ServerMaintenance/Debian/Common/ConfigureSystem.sh "$EnvironmentStage" "/Workspace/ScriptCollection" "" "/Workspace"
+COPY ./EntryPointScript.sh /Content/App/EntryPointScript.sh
+RUN chmod +x /Content/App/EntryPointScript.sh
+RUN chown -R user /Content
+
+RUN /Content/ScriptCollection/Other/ServerMaintenance/Debian/Common/ConfigureSystem.sh "$EnvironmentStage" "/Content/ScriptCollection" "" "/Content/ScriptCollection"
 
 USER user
-WORKDIR /Data
 
-ENTRYPOINT ["/App/EntryPointScript.sh"]
+ENTRYPOINT ["./EntryPointScript.sh"]
