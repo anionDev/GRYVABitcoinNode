@@ -1,4 +1,4 @@
-# GRYVABitcoin
+# GRYVABitcoinNode
 
 ## Purpose
 
