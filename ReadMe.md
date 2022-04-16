@@ -2,7 +2,11 @@
 
 ## Purpose
 
-Represents a [Bitcoin-node](https://bitcoin.org/)-server.
+GRYVABitcoinNode is a docker-image for simply running a [Bitcoin-node](https://bitcoin.org/)-server in a docker-container.
+
+## Version
+
+The Bitcoin-node-version in the latest image is v0.21.1.
 
 ## Usage
 
