@@ -1,8 +1,12 @@
 FROM debian:stable-slim
 
-ARG EnvironmentStage
+ARG EnvironmentStage="QualityCheck"
+ARG Version="0.1.0"
 
-ENV bitcoinversion=0.21.1
+LABEL version="$Version"
+LABEL description="Represents a Bitcoin-Node."
+
+ENV bitcoinversion="22.0"
 
 RUN mkdir /Workspace
 WORKDIR /Workspace
@@ -10,10 +14,10 @@ WORKDIR /Workspace
 RUN apt update
 RUN apt install -y git wget
 
-RUN git clone --single-branch --branch main https://github.com/anionDev/ScriptCollection.git
-RUN chmod -R +x ./ScriptCollection/Other
+RUN git clone --depth 1 --single-branch --branch main https://github.com/anionDev/ScriptCollection.git
+RUN chmod -R +x ./ScriptCollection/OtherScripts
 
-RUN /Workspace/ScriptCollection/Other/ServerMaintenance/Debian/Common/CreateUser.sh "user" "/userhome" "false" "" "false" "false"
+RUN ./ScriptCollection/OtherScripts/ServerMaintenance/Debian/Common/CreateUser.sh "user" "/Workspace/userhome" "false" "" "false" "false"
 
 RUN mkdir /Data
 
@@ -23,14 +27,14 @@ WORKDIR /App
 RUN wget https://bitcoin.org/bin/bitcoin-core-$bitcoinversion/bitcoin-$bitcoinversion-x86_64-linux-gnu.tar.gz
 RUN tar xzf bitcoin-$bitcoinversion-x86_64-linux-gnu.tar.gz
 RUN install -m 0755 -o root -g root -t /usr/local/bin bitcoin-$bitcoinversion/bin/*
-# TODO install application
+
 
 COPY ./EntryPointScript.sh /App/EntryPointScript.sh
 RUN chmod +x /App/EntryPointScript.sh
 RUN chown -R user /App
 RUN chown -R user /Data
 
-RUN /Workspace/ScriptCollection/Other/ServerMaintenance/Debian/Common/ConfigureSystem.sh "$EnvironmentStage" "/Workspace/ScriptCollection" "" "/Workspace"
+RUN /Workspace/ScriptCollection/OtherScripts/ServerMaintenance/Debian/Common/ConfigureSystem.sh "$EnvironmentStage" "/Workspace/ScriptCollection" "" "/Workspace/ScriptCollection"
 
 USER user
 WORKDIR /Data
