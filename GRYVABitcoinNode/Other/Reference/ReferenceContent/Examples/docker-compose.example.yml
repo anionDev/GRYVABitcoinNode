@@ -4,4 +4,4 @@ services:
     image: 'gryvabitcoinnode:latest'
     container_name: 'GRYVABitcoinNode'
     volumes:
-      - ./Volumes/Data:/userhome/.bitcoin
+      - ./Volumes/Data:/Workspace/userhome/.bitcoin
