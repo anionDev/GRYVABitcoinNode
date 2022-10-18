@@ -1,0 +1,7 @@
+version: '3.2'
+services:
+  GRYVABitcoinNode:
+    image: 'gryvabitcoinnode:latest'
+    container_name: 'GRYVABitcoinNode'
+    volumes:
+      - ./Volumes/Data:/Workspace/userhome/.bitcoin

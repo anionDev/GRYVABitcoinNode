@@ -1,0 +1,96 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"tasks": {
+		"version": "2.0.0",
+		"tasks": [
+			{
+				"label": "GRYVABitcoinNode: Build entire codeunit",
+				"command": "SCBuildCodeunit",
+				"args": [
+					"${workspaceFolder}/GRYVABitcoinNode"
+				],
+				"type": "shell",
+			},
+			{
+				"label": "GRYVABitcoinNode: Common tasks",
+				"command": "python",
+				"args": [
+					"${workspaceFolder}/GRYVABitcoinNode/Other/CommonTasks.py"
+				],
+				"type": "shell",
+			},
+			{
+				"label": "GRYVABitcoinNode: Build",
+				"command": "python",
+				"args": [
+					"${workspaceFolder}/GRYVABitcoinNode/Other/Build/Build.py"
+				],
+				"type": "shell",
+			},
+			{
+				"label": "GRYVABitcoinNode: Run testcases",
+				"command": "python",
+				"args": [
+					"${workspaceFolder}/GRYVABitcoinNode/Other/QualityCheck/RunTestcases.py"
+				],
+				"type": "shell",
+			},
+			{
+				"label": "GRYVABitcoinNode: Linting",
+				"command": "python",
+				"args": [
+					"${workspaceFolder}/GRYVABitcoinNode/Other/QualityCheck/Linting.py"
+				],
+				"type": "shell",
+			},
+			{
+				"label": "GRYVABitcoinNode: Generate reference",
+				"command": "python",
+				"args": [
+					"${workspaceFolder}/GRYVABitcoinNode/Other/Reference/GenerateReference.py"
+				],
+				"type": "shell",
+			},
+			{
+				"label": "GRYVABitcoinNode: Run example",
+				"command": "docker-compose",
+				"args": [
+					"${workspaceFolder}/GRYVABitcoinNode/Other/Reference/ReferenceContent/Examples",
+					"--file",
+					"docker-compose.example.yml",
+					"up",
+					"--build"
+				],
+				"type": "shell",
+			}
+		]
+	},
+	"settings": {
+		"files.associations": {
+			"*.codeunit": "xml",
+		},
+		"files.exclude": {},
+		"spellright.language": [
+			"en",
+		],
+		"spellright.documentTypes": [
+			"markdown",
+			"plaintext",
+		],
+	},
+	"launch": {
+		"configurations": [
+			{
+				"name": "All: Debug current file",
+				"type": "python",
+				"request": "launch",
+				"program": "${file}",
+				"console": "integratedTerminal"
+			},
+		]
+	}
+}
