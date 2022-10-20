@@ -1,7 +1,7 @@
 FROM debian:stable-slim
 
 ARG EnvironmentStage="QualityCheck"
-ARG Version="0.1.0"
+ARG Version="0.2.0"
 
 LABEL version="$Version"
 LABEL description="Represents a Bitcoin-Node."
