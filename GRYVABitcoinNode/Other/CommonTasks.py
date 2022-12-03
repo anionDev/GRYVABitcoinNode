@@ -12,8 +12,8 @@ def common_tasks():
     sc = ScriptCollectionCore()
     version = sc.get_semver_version_from_gitversion(GeneralUtilities.resolve_relative_path("../..", os.path.dirname(file)))
     sc.replace_version_in_dockerfile_file(GeneralUtilities.resolve_relative_path("../GRYVABitcoinNode/Dockerfile", folder_of_current_file), version)
-    tfcps = TasksForCommonProjectStructure()
-    tfcps.standardized_tasks_do_common_tasks(file, 1, "QualityCheck", True, sys.argv)
+    t = TasksForCommonProjectStructure()
+    t.standardized_tasks_do_common_tasks(file, 1, "QualityCheck", True, sys.argv)
 
 
 if __name__ == "__main__":

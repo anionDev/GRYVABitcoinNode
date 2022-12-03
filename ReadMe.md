@@ -1,17 +1,27 @@
 # GRYVABitcoinNode
 
-## Purpose
+## Development-state
 
-Represents a [Bitcoin-node](https://bitcoin.org/).
+![Development-state](https://img.shields.io/badge/development--state-maintenance%20updates%20only-green)
 
-## Usage
+This state refers to the `GRYVABitcoinNode`-code-unit.
+The underlying [bitcoin](https://bitcoin.org)-application will be developed actively.
 
-### Volumes
+## General
 
-Using volumes is recommended to preserve data. The available folder for a volume is:
+[GRYVABitcoinNode](https://projects.aniondev.de/PublicProjects/GRYVAImages/GRYVABitcoinNode) is a docker-image for simply running a [bitcoin](https://bitcoin.org)-node in a docker-container.
+The details can be found [here](https://projects.aniondev.de/PublicProjects/GRYVAImages/GRYVABitcoinNode/-/tree/main/GRYVABitcoinNode).
 
-- `/userhome/.bitcoin`: Folder for all stored data and configuration of the hosted server.
+## Development
 
-### Environment-variables
+### Branching-system
 
-There are currently no environment-variables available.
+This repository applies the [GitFlowSimplified](https://projects.aniondev.de/PublicProjects/Common/ProjectTemplates/-/blob/main/Conventions/BranchingSystem/GitFlowSimplified/GitFlowSimplified.md)-branching-system.
+
+### Repository-structure
+
+This repository applies the [CommonProjectStructure](https://projects.aniondev.de/PublicProjects/Common/ProjectTemplates/-/blob/main/Conventions/RepositoryStructure/CommonProjectStructure/CommonProjectStructure.md)-repository-structure.
+
+## License
+
+See [License.txt](https://projects.aniondev.de/PublicProjects/GRYVAImages/GRYVABitcoinNode/-/raw/main/License.txt) for license-information.

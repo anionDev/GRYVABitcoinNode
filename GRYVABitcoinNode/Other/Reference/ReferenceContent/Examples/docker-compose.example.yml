@@ -1,7 +1,7 @@
 version: '3.2'
 services:
-  GRYVABitcoinNode:
+  gryvabitcoinnode:
     image: 'gryvabitcoinnode:latest'
-    container_name: 'GRYVABitcoinNode'
+    container_name: 'gryvabitcoinnode'
     volumes:
       - ./Volumes/Data:/root/.bitcoin
