@@ -1,8 +1,14 @@
 # GRYVABitcoinServer
 
+## Development-state
+
+![Development-state](https://img.shields.io/badge/development--state-maintenance%20updates%20only-green)
+
+(The underlying [Bitcoin](https://bitcoin.org)-node will be developed actively.)
+
 ## Purpose
 
-[GRYVABitcoinNode](https://projects.aniondev.de/PublicProjects/GRYVAImages/GRYVABitcoinNode) is a docker-image for simply running a [bitcoin](https://bitcoin.org)-node in a docker-container.
+[GRYVABitcoinNode](https://projects.aniondev.de/PublicProjects/GRYVAImages/GRYVABitcoinNode) is a docker-image for simply running a [Bitcoin](https://bitcoin.org)-node in a docker-container.
 
 The latest-release contains Bitcoin v22.0.
 

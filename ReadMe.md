@@ -4,12 +4,11 @@
 
 ![Development-state](https://img.shields.io/badge/development--state-maintenance%20updates%20only-green)
 
-This state refers to the `GRYVABitcoinNode`-code-unit.
-The underlying [bitcoin](https://bitcoin.org)-application will be developed actively.
+The underlying [Bitcoin](https://bitcoin.org)-application will be developed actively.
 
 ## General
 
-[GRYVABitcoinNode](https://projects.aniondev.de/PublicProjects/GRYVAImages/GRYVABitcoinNode) is a docker-image for simply running a [bitcoin](https://bitcoin.org)-node in a docker-container.
+[GRYVABitcoinNode](https://projects.aniondev.de/PublicProjects/GRYVAImages/GRYVABitcoinNode) is a docker-image for simply running a [Bitcoin](https://bitcoin.org)-node in a docker-container.
 The details can be found [here](https://projects.aniondev.de/PublicProjects/GRYVAImages/GRYVABitcoinNode/-/tree/main/GRYVABitcoinNode).
 
 ## Development
