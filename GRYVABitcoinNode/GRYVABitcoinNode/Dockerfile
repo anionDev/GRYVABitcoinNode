@@ -1,10 +1,10 @@
 FROM debian:stable-slim
 
-LABEL maintainer "marius.goecke@gmail.com"
-LABEL version="$Version"
-LABEL description="GRYVABitcoinNode is a docker-image for simply running a bitcoin-node in a docker-container."
 ARG TargetEnvironmentType
 ARG Version="0.2.1"
+LABEL maintainer "marius.goecke@gmail.com"
+LABEL version="v$Version"
+LABEL description="GRYVABitcoinNode is a docker-image for simply running a bitcoin-node in a docker-container."
 
 ENV bitcoinversion="22.0"
 RUN mkdir /Workspace
