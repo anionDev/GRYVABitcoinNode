@@ -24,7 +24,7 @@ RUN install -m 0755 -o root -g root -t /usr/local/bin bitcoin-$bitcoinversion/bi
 COPY ./EntryPointScript.sh /Workspace/Program/EntryPointScript.sh
 RUN chmod +x /Workspace/Program/EntryPointScript.sh
 
-RUN /Workspace/ScriptCollection/Other/OtherScripts/ServerMaintenance/Debian/Common/ConfigureSystem.sh "$EnvironmentStage" "/Workspace/ScriptCollection" "" "/Workspace/ScriptCollection"
+RUN /Workspace/ScriptCollection/Other/OtherScripts/ServerMaintenance/Debian/Common/ConfigureSystem.sh "$TargetEnvironmentType" "/Workspace/ScriptCollection" "" "/Workspace/ScriptCollection"
 
 WORKDIR /Workspace/Program
 ENTRYPOINT ["/Workspace/Program/EntryPointScript.sh"]
