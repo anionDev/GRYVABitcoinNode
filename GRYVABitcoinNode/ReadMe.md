@@ -4,12 +4,26 @@
 
 ![Development-state](https://img.shields.io/badge/development--state-maintenance%20updates%20only-green)
 
-The underlying [Bitcoin](https://bitcoin.org)-application will be developed actively.
+(The underlying [Bitcoin](https://bitcoin.org)-node will be developed actively.)
 
-## General
+## Purpose
 
 [GRYVABitcoinNode](https://projects.aniondev.de/PublicProjects/GRYVAImages/GRYVABitcoinNode) is a docker-image for simply running a [Bitcoin](https://bitcoin.org)-node in a docker-container.
-The details can be found [here](https://projects.aniondev.de/PublicProjects/GRYVAImages/GRYVABitcoinNode/-/tree/main/GRYVABitcoinNode).
+
+The latest-release contains Bitcoin v22.0.
+
+## Usage
+
+### Volumes
+
+Using volumes is not required. There are the following recommended folder for using as volume:
+
+- `/root/.bitcoin`
+- `/var/log/tor`
+
+### Example
+
+See the [minimal example `docker-compose.yml`](https://projects.aniondev.de/PublicProjects/GRYVAImages/GRYVABitcoinNode/-/blob/main/GRYVABitcoinNode/Other/Examples/MinimalDockerComposeFile/docker-compose.yml) for an example how to use this image.
 
 ## Development
 

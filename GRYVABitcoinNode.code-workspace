@@ -1,7 +1,12 @@
 {
 	"folders": [
 		{
-			"path": "."
+			"path": ".",
+			"name": "Entire repository"
+		},
+		{
+			"path": "./GRYVABitcoinNode",
+			"name": "GRYVABitcoinNode"
 		}
 	],
 	"tasks": {
@@ -11,69 +16,32 @@
 				"label": "GRYVABitcoinNode: Build entire codeunit",
 				"command": "SCBuildCodeunit",
 				"args": [
+					"--codeunitfolder",
 					"${workspaceFolder}/GRYVABitcoinNode"
 				],
 				"type": "shell",
 			},
 			{
-				"label": "GRYVABitcoinNode: Common tasks",
-				"command": "python",
-				"args": [
-					"${workspaceFolder}/GRYVABitcoinNode/Other/CommonTasks.py"
-				],
-				"type": "shell",
-			},
-			{
-				"label": "GRYVABitcoinNode: Build",
-				"command": "python",
-				"args": [
-					"${workspaceFolder}/GRYVABitcoinNode/Other/Build/Build.py"
-				],
-				"type": "shell",
-			},
-			{
-				"label": "GRYVABitcoinNode: Run testcases",
-				"command": "python",
-				"args": [
-					"${workspaceFolder}/GRYVABitcoinNode/Other/QualityCheck/RunTestcases.py"
-				],
-				"type": "shell",
-			},
-			{
-				"label": "GRYVABitcoinNode: Linting",
-				"command": "python",
-				"args": [
-					"${workspaceFolder}/GRYVABitcoinNode/Other/QualityCheck/Linting.py"
-				],
-				"type": "shell",
-			},
-			{
-				"label": "GRYVABitcoinNode: Generate reference",
-				"command": "python",
-				"args": [
-					"${workspaceFolder}/GRYVABitcoinNode/Other/Reference/GenerateReference.py"
-				],
-				"type": "shell",
-			},
-			{
 				"label": "GRYVABitcoinNode: Run example",
-				"command": "docker-compose",
-				"args": [
-					"${workspaceFolder}/GRYVABitcoinNode/Other/Reference/ReferenceContent/Examples",
-					"--file",
-					"docker-compose.example.yml",
-					"up",
-					"--build"
-				],
+				"command": "python3 GRYVABitcoinNode/Other/Examples/MinimalDockerComposeFile/RunExample.py",
+				"args": [],
 				"type": "shell",
 			}
 		]
 	},
+	"launch": {
+		"version": "0.2.0",
+		"configurations": [
+			{
+				"name": "Debug current file",
+				"type": "python",
+				"request": "launch",
+				"program": "${file}",
+				"console": "integratedTerminal"
+			}
+		]
+	},
 	"settings": {
-		"files.associations": {
-			"*.codeunit": "xml",
-		},
-		"files.exclude": {},
 		"spellright.language": [
 			"en",
 		],
@@ -81,16 +49,5 @@
 			"markdown",
 			"plaintext",
 		],
-	},
-	"launch": {
-		"configurations": [
-			{
-				"name": "All: Debug current file",
-				"type": "python",
-				"request": "launch",
-				"program": "${file}",
-				"console": "integratedTerminal"
-			},
-		]
 	}
 }
