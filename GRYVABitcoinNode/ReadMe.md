@@ -1,4 +1,4 @@
-# GRYVABitcoinServer
+# GRYVABitcoinNode
 
 ## Development-state
 
@@ -23,8 +23,18 @@ Using volumes is not required. There are the following recommended folder for us
 
 ### Example
 
-See [`docker-compose.example.yml`](https://projects.aniondev.de/PublicProjects/GRYVAImages/GRYVABitcoinServer/-/blob/main/GRYVABitcoinServer/Other/Reference/ReferenceContent/Examples/docker-compose.example.yml) for an example how to use this image.
+See the [minimal example `docker-compose.yml`](https://projects.aniondev.de/PublicProjects/GRYVAImages/GRYVABitcoinNode/-/blob/main/GRYVABitcoinNode/Other/Examples/MinimalDockerComposeFile/docker-compose.yml) for an example how to use this image.
+
+## Development
+
+### Branching-system
+
+This repository applies the [GitFlowSimplified](https://projects.aniondev.de/PublicProjects/Common/ProjectTemplates/-/blob/main/Conventions/BranchingSystem/GitFlowSimplified/GitFlowSimplified.md)-branching-system.
+
+### Repository-structure
+
+This repository applies the [CommonProjectStructure](https://projects.aniondev.de/PublicProjects/Common/ProjectTemplates/-/blob/main/Conventions/RepositoryStructure/CommonProjectStructure/CommonProjectStructure.md)-repository-structure.
 
 ## License
 
-See [License.txt](https://projects.aniondev.de/PublicProjects/GRYVAImages/GRYVABitcoinServer/-/raw/main/License.txt) for license-information.
+See [License.txt](https://projects.aniondev.de/PublicProjects/GRYVAImages/GRYVABitcoinNode/-/raw/main/License.txt) for license-information.

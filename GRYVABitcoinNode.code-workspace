@@ -1,6 +1,10 @@
 {
 	"folders": [
 		{
+			"path": ".",
+			"name": "Entire repository"
+		},
+		{
 			"path": "./GRYVABitcoinNode",
 			"name": "GRYVABitcoinNode"
 		}
@@ -15,6 +19,12 @@
 					"--codeunitfolder",
 					"${workspaceFolder}/GRYVABitcoinNode"
 				],
+				"type": "shell",
+			},
+			{
+				"label": "GRYVABitcoinNode: Run example",
+				"command": "python3 GRYVABitcoinNode/Other/Examples/MinimalDockerComposeFile/RunExample.py",
+				"args": [],
 				"type": "shell",
 			}
 		]
