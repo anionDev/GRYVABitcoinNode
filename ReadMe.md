@@ -1,17 +1,20 @@
 # GRYVABitcoinNode
 
-## Development-state
+## General
+
+[GRYVABitcoinNode](https://github.com/anionDev/GRYVABitcoinNode) is a docker-image for simply running a [Bitcoin](https://bitcoin.org)-node in a docker-container.
+
+## Reference
+
+The reference can be found [here](https://github.com/anionDev/GRYVABitcoinNode/blob/main/GRYVABitcoinNode/Other/Reference/ReferenceContent/index.md).
+
+## Development
+
+### Development-state
 
 ![Development-state](https://img.shields.io/badge/development--state-maintenance%20updates%20only-green)
 
 The underlying [Bitcoin](https://bitcoin.org)-application will be developed actively.
-
-## General
-
-[GRYVABitcoinNode](https://projects.aniondev.de/PublicProjects/GRYVAImages/GRYVABitcoinNode) is a docker-image for simply running a [Bitcoin](https://bitcoin.org)-node in a docker-container.
-The details can be found [here](https://projects.aniondev.de/PublicProjects/GRYVAImages/GRYVABitcoinNode/-/tree/main/GRYVABitcoinNode).
-
-## Development
 
 ### Branching-system
 
@@ -23,4 +26,4 @@ This repository applies the [CommonProjectStructure](https://projects.aniondev.d
 
 ## License
 
-See [License.txt](https://projects.aniondev.de/PublicProjects/GRYVAImages/GRYVABitcoinNode/-/raw/main/License.txt) for license-information.
+See [License.txt](https://github.com/anionDev/GRYVABitcoinNode/blob/main/License.txt) for license-information.
