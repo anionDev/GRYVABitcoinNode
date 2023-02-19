@@ -1,3 +1,3 @@
 #!/bin/bash
 
-bitcoind
+bitcoind -datadir=/Workspace/Data

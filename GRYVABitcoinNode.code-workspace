@@ -1,12 +1,12 @@
 {
 	"folders": [
 		{
-			"path": ".",
-			"name": "Entire repository"
-		},
-		{
 			"path": "./GRYVABitcoinNode",
 			"name": "GRYVABitcoinNode"
+		},
+		{
+			"path": ".",
+			"name": "Entire repository"
 		}
 	],
 	"tasks": {

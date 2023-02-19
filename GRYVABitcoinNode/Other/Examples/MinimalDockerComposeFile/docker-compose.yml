@@ -5,5 +5,4 @@ services:
     image: 'gryvabitcoinnode:0.2.1'
     container_name: 'gryvabitcoinnode'
     volumes:
-      - "./Volumes/Data:/root/.bitcoin"
-      - "./Volumes/Log:/var/log/tor"
+      - "./Volumes/Data:/Workspace/Data"
