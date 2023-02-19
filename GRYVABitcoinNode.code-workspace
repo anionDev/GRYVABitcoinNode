@@ -1,12 +1,12 @@
 {
 	"folders": [
 		{
-			"path": "./GRYVABitcoinNode",
-			"name": "GRYVABitcoinNode"
-		},
-		{
 			"path": ".",
 			"name": "Entire repository"
+		},
+		{
+			"path": "./GRYVABitcoinNode",
+			"name": "GRYVABitcoinNode"
 		}
 	],
 	"tasks": {
@@ -17,12 +17,18 @@
 				"command": "SCBuildCodeunits",
 				"args": [],
 				"type": "shell",
+				"options": {
+					"cwd": "${workspaceFolder}"
+				}
 			},
 			{
 				"label": "GRYVABitcoinNode: Run example",
-				"command": "python3 GRYVABitcoinNode/Other/Examples/MinimalDockerComposeFile/RunExample.py",
+				"command": "python3 RunExample.py",
 				"args": [],
 				"type": "shell",
+				"options": {
+					"cwd": "${workspaceFolder}/GRYVABitcoinNode/Other/Examples/MinimalDockerComposeFile"
+				}
 			}
 		]
 	},
