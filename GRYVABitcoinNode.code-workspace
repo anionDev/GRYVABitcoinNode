@@ -13,19 +13,22 @@
 		"version": "2.0.0",
 		"tasks": [
 			{
-				"label": "GRYVABitcoinNode: Build entire codeunit",
-				"command": "SCBuildCodeunit",
-				"args": [
-					"--codeunitfolder",
-					"${workspaceFolder}/GRYVABitcoinNode"
-				],
+				"label": "Build all codeunits",
+				"command": "SCBuildCodeunits",
+				"args": [],
 				"type": "shell",
+				"options": {
+					"cwd": "${workspaceFolder}"
+				}
 			},
 			{
 				"label": "GRYVABitcoinNode: Run example",
-				"command": "python3 GRYVABitcoinNode/Other/Examples/MinimalDockerComposeFile/RunExample.py",
+				"command": "python3 RunExample.py",
 				"args": [],
 				"type": "shell",
+				"options": {
+					"cwd": "${workspaceFolder}/GRYVABitcoinNode/Other/Examples/MinimalDockerComposeFile"
+				}
 			}
 		]
 	},
