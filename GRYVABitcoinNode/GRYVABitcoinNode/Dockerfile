@@ -7,17 +7,18 @@ LABEL version="v$Version"
 LABEL description="GRYVABitcoinNode is a docker-image for simply running a bitcoin-node in a docker-container."
 
 ENV bitcoinversion="22.0"
-RUN mkdir /Workspace
-RUN mkdir /Workspace/Program
-RUN mkdir /Workspace/Data
+RUN mkdir /Workspace && \
+    mkdir /Workspace/Program && \
+    mkdir /Workspace/Data && \
+    apt update && \
+    apt install -y wget
+
 WORKDIR /Workspace
 
-RUN apt update
-RUN apt install -y wget
-
-RUN wget https://bitcoin.org/bin/bitcoin-core-$bitcoinversion/bitcoin-$bitcoinversion-x86_64-linux-gnu.tar.gz
-RUN tar xzf bitcoin-$bitcoinversion-x86_64-linux-gnu.tar.gz
-RUN install -m 0755 -o root -g root -t /usr/local/bin bitcoin-$bitcoinversion/bin/*
+RUN wget https://bitcoin.org/bin/bitcoin-core-$bitcoinversion/bitcoin-$bitcoinversion-x86_64-linux-gnu.tar.gz &&\
+    tar xzf bitcoin-$bitcoinversion-x86_64-linux-gnu.tar.gz && \
+    install -m 0755 -o root -g root -t /usr/local/bin bitcoin-$bitcoinversion/bin/* && \
+    rm bitcoin-$bitcoinversion-x86_64-linux-gnu.tar.gz
 
 COPY ./GRYVABitcoinNode/EntryPointScript.sh /Workspace/Program/EntryPointScript.sh
 RUN chmod +x /Workspace/Program/EntryPointScript.sh
