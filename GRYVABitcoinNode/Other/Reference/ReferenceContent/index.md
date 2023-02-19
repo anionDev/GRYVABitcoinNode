@@ -1,3 +1,3 @@
-# GRYVAPaperServer reference
+# GRYVABitcoinNode reference
 
 TODO

@@ -2,7 +2,7 @@ version: '3.2'
 
 services:
   gryvabitcoinnode:
-    image: 'gryvabitcoinnode:0.2.3'
+    image: 'gryvabitcoinnode:0.2.4'
     container_name: 'gryvabitcoinnode'
     volumes:
       - "./Volumes/Data:/Workspace/Data"
