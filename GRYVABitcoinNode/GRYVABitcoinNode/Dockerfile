@@ -1,7 +1,7 @@
 FROM debian:stable-slim as builder
 
 ARG TargetEnvironmentType
-ARG Version="0.2.4"
+ARG Version="0.2.5"
 ENV bitcoinversion="22.0"
 LABEL maintainer "marius.goecke@gmail.com"
 LABEL version="v$Version"
@@ -11,6 +11,7 @@ RUN mkdir /Workspace && \
     mkdir /Workspace/Program && \
     mkdir /Workspace/Data && \
     mkdir /Workspace/Temp && \
+    mkdir /Workspace/Logs && \
     apt update && \
     apt install -y wget
 WORKDIR /Workspace/Temp

@@ -1,3 +1,3 @@
 #!/bin/bash
 
-bitcoind -datadir=/Workspace/Data
+bitcoind -datadir=/Workspace/Data -debuglogfile=/Workspace/Logs/BitcoinLogfile.log

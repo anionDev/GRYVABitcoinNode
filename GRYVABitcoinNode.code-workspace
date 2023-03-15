@@ -2,7 +2,7 @@
 	"folders": [
 		{
 			"path": ".",
-			"name": "Entire repository"
+			"name": "Entire repository",
 		},
 		{
 			"path": "./GRYVABitcoinNode",
@@ -18,17 +18,17 @@
 				"args": [],
 				"type": "shell",
 				"options": {
-					"cwd": "${workspaceFolder}"
-				}
+					"cwd": "${workspaceFolder}",
+				},
 			},
 			{
 				"label": "GRYVABitcoinNode: Run example",
-				"command": "python3 RunExample.py",
+				"command": "python GRYVABitcoinNode/Other/Reference/ReferenceContent/Examples/MinimalDockerComposeFile/RunExample.py",
 				"args": [],
 				"type": "shell",
 				"options": {
-					"cwd": "${workspaceFolder}/GRYVABitcoinNode/Other/Examples/MinimalDockerComposeFile"
-				}
+					"cwd": "${workspaceFolder}",
+				},
 			}
 		]
 	},
@@ -45,12 +45,12 @@
 		]
 	},
 	"settings": {
-		"spellright.language": [
-			"en",
-		],
 		"spellright.documentTypes": [
 			"markdown",
 			"plaintext",
+		],
+		"spellright.language": [
+			"en",
 		],
 	}
 }
