@@ -11,6 +11,7 @@ RUN mkdir /Workspace && \
     mkdir /Workspace/Program && \
     mkdir /Workspace/Data && \
     mkdir /Workspace/Temp && \
+    mkdir /Workspace/Logs && \
     apt update && \
     apt install -y wget
 WORKDIR /Workspace/Temp

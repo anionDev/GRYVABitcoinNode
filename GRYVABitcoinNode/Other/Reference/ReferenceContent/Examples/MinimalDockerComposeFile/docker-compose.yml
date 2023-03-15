@@ -6,3 +6,4 @@ services:
     container_name: 'gryvabitcoinnode'
     volumes:
       - "./Volumes/Data:/Workspace/Data"
+      - "./Volumes/Logs:/Workspace/Logs"
