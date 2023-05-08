@@ -1,7 +1,7 @@
 FROM debian:stable-slim as builder
 
 ARG TargetEnvironmentType
-ARG Version="0.2.5"
+ARG Version="0.2.6"
 ENV bitcoinversion="22.0"
 LABEL maintainer "marius.goecke@gmail.com"
 LABEL version="v$Version"
