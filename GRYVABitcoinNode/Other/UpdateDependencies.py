@@ -1,8 +1,7 @@
 from pathlib import Path
+import re
 import requests
 from packaging.version import Version
-import re
-from ScriptCollection.ScriptCollectionCore import ScriptCollectionCore
 from ScriptCollection.TasksForCommonProjectStructure import TasksForCommonProjectStructure
 
 
