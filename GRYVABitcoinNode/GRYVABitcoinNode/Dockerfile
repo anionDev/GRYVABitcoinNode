@@ -3,7 +3,7 @@ FROM debian:stable-slim as builder
 ARG TargetEnvironmentType
 ARG CodeUnitOwnerEMailAddress
 ARG BitcoinVersion
-ARG Version="0.2.10"
+ARG Version="0.2.11"
 LABEL maintainer "$CodeUnitOwnerEMailAddress"
 LABEL version="v$Version"
 LABEL description="GRYVABitcoinNode is a docker-image for simply running a bitcoin-node in a docker-container."
